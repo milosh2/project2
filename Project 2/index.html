@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project 2</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Prompt:wght@100&display=swap" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet"/>
+        <script src="javascript.js"></script>
+
+    </head>
+
+    <body>
+
+        <header> Milosh Ilic</header> <br><br>
+
+        <div id="top">
+            <nav> 
+                <ul><li>
+                    <a href="#top">HOME</a>
+                </li> </ul>
+
+                <ul><li>
+                    <a href="#portfoliolink">PORTFOLIO</a>
+                </li> </ul>
+
+                <ul><li>
+                    <a href="#ft">CONTACT</a>
+                </li> </ul>
+            </nav>
+
+            <br><br>
+            <div id="pfp"><img src="images/responsive-layout-profile.png" ></div>
+            
+        </div>   
+
+        <p> hi im a front end developer</p> 
+
+        <div id = "portfoliolink"></div>
+
+        <h1> PORTFOLIO</h1>
+
+        <div class = "container">
+<!---------------------- flexbox -------------------------->
+        <div class = "page">
+            <img class = "myImg" src="images/mypic1.PNG">
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img1">
+                <div id="caption"></div>
+              </div>
+            <h2>Flexbox Page</h2> 
+            <h3> this flexbox page shows a flex website meant for showing off the capabilities of flex</h3>
+        </div>
+ <!---------------------- newspaper -------------------------->  
+    <div class = "page">
+            <img class = "myImg" src="images/mypic23.PNG">
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img1">
+                <div id="caption"></div>
+            </div>
+          <h2>Newspaper Page</h2> 
+          <h3> this page was made using flex and stlying to make it look like a newspaper</h3>
+      </div>
+ <!---------------------- travel -------------------------->            
+    <div class = "page">
+            <img class = "myImg" src="images/portfolio-3.png">
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img1">
+                <div id="caption"></div>
+              </div>
+            <h2>Travel App</h2>
+            <h3> this travel page shows a travel website meant for specific travel ideas</h3>
+        </div>
+ <!---------------------- map -------------------------->  
+    <div class = "page">
+            <img class = "myImg" src="images/portfolio-4.png">
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img1">
+                <div id="caption"></div>
+              </div>
+            <h2>Map of favourite spots</h2> 
+            <h3> this map page shows a map website meant for specific map ideas</h3>
+        </div>
+ <!---------------------- photo -------------------------->  
+    <div class = "page">
+            <img class = "myImg" src="images/portfolio-5.png">
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img1">
+                <div id="caption"></div>
+              </div>
+            <h2>Photo Gallery</h2> 
+            <h3> this photo gallery page shows a gallery website meant for specific photo ideas</h3>
+        </div>
+ <!---------------------- calculator -------------------------->  
+    <div class = "page">
+            <img class = "myImg" src="images/portfolio-6.png">
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img1">
+                <div id="caption"></div>
+              </div>
+            <h2>Calculator</h2> 
+            <h3> this calculator page shows a calculator app that is designed to do quick mathematics</h3>
+        </div>
+    
+        </div>
+
+<script>
+        var modal = document.getElementById("myModal");
+
+        var img = document.getElementsByClassName("myImg");
+        var modalImg = document.getElementById("img1");
+        var captionText = document.getElementById("caption");
+var showModal = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+}
+   
+        for (var i = 0; i < img.length; i++) {
+            img[i].addEventListener('click', showModal);
+            }
+
+         var span = document.getElementsByClassName("close")[0];
+           
+         span.onclick = function() { 
+          modal.style.display = "none";
+        }
+
+    window.onclick = function(event) {
+    if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+</script>
+
+<footer>
+    CONTACT<br>
+    if youre interested in chatting or would like more info 
+    Id like to hear from youre
+
+    <br><br>
+    Phone +1 123 345 6775
+    <br><br>
+    Email: fakeemail@live.com
+
+    <div id = "ft">
+        <div id = "name" >Milosh Ilic </div>
+        <div id = "backtop" >
+            <a href="#top">Back to Top</a>
+        </div>
+    </div>
+
+</footer>
+
+    </body>
+</html>
